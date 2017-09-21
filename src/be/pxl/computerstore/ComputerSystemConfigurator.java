@@ -46,7 +46,7 @@ public class ComputerSystemConfigurator {
 					computerSystem.addPeripheral((Peripheral) chosen);
 				} catch (TooManyPeripheralsException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.out.println("Maximum aantal randapparaten bereikt (3)");
 				}
 			}
 			System.out.println("Wil u nog een randaparaat toevoegen (j/n)?");
