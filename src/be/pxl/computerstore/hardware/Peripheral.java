@@ -14,4 +14,10 @@ public abstract class Peripheral extends ComputerComponent {
 		 return getArticleNumber() +" * "+ getClass().getSimpleName()+" * " + getName() + " * " + getPrice() + "€";
 	}
 	
+	@Override
+	public String toString() {
+		
+		return "ArticleNumber = " + getArticleNumber() + "\nVendor = " + getVendor() + "\n" + "Name = " + getName() + "\n"
+				+ "Price = " + getPrice();
+	}
 }

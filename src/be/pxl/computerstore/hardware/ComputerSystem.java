@@ -86,11 +86,11 @@ public class ComputerSystem implements Computable {
 		String string = "Computercase:\n " + computerCase.toString() + "\nProcessor:\n" + processor.toString();
 		for (int i = 0; i < MAX_PERIPHERAL; i++) {
 			if (peripherals[i] != null) {
-				string += "\nRandapparaat" + i + 1 + ":\n";
+				string += "\nRandapparaat" +( i + 1) + ":\n";
 				string += peripherals[i].toString() + "\n";
 			}
 		}
-		string += "TOTAAL EXCL.: " + totalPriceExcl() + "\nTOTAALINCL.: " + totalPriceIncl();
+		string += "\nTOTAAL EXCL.: " + totalPriceExcl() + "\nTOTAALINCL.: " + totalPriceIncl();
 
 		return string;
 	}
