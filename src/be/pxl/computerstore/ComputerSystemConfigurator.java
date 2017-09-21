@@ -42,7 +42,12 @@ public class ComputerSystemConfigurator {
 			String artikelnummer = keyboard.nextLine();
 			ComputerComponent chosen = getComputerComponent(artikelnummer);
 			if (chosen instanceof Peripheral) {
-				computerSystem.addPeripheral((Peripheral) chosen);
+				try {
+					computerSystem.addPeripheral((Peripheral) chosen);
+				} catch (TooManyPeripheralsException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 			System.out.println("Wil u nog een randaparaat toevoegen (j/n)?");
 			choosePeripheral = keyboard.nextLine().equals("j");
